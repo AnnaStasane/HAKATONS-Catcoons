@@ -82,15 +82,15 @@ run = True
 while run:
     screen.blit(city_image[sum], (0, 0))
 
-    stand = screen.blit(stand_img, (350, 200))
+    stand = screen.blit(stand_img, (350, 350))
     goodchoice = screen.blit(goodchoice_img, (150, 100))
     badchoice = screen.blit(badchoice_img, (625, 100))
     
     if goodchoice.collidepoint(pygame.mouse.get_pos()):
-        stand_img = pygame.image.load("img/stand-left.png")
+        stand_img = pygame.image.load("img/stand_left.png")
         hover_text = good_phrase
     elif badchoice.collidepoint(pygame.mouse.get_pos()):
-        stand_img = pygame.image.load("img/stand-right.png")
+        stand_img = pygame.image.load("img/stand_right.png")
         hover_text = bad_phrase
     else:
         stand_img = pygame.image.load("img/stand.png")
